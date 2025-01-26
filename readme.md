@@ -4,7 +4,7 @@
 ![](photo/opendos65.png)
 
 ## 特徴
-  OSI用の DOS/65を移植し、[Rev2.0](https://github.com/akih-san/MEZW65C_RAM-Rev2.0/tree/main)に追加しました。<br>
+  [OSI用の DOS/65](https://github.com/osiweb/DOS65/tree/master)を移植し、[Rev2.0](https://github.com/akih-san/MEZW65C_RAM-Rev2.0/tree/main)に追加しました。<br>
   DOS/65は、Richard氏が、S-100 ベースのシステム向けに作成されました。<br>
   その後DOS/65は、幾つかのシステムに移植されています。<br>
   DOS/65はCP/Mの6502版と言えます。同様のものに[cpm65](https://github.com/davidgiven/cpm65?tab=readme-ov-file)がありますが、<br>
