@@ -39,16 +39,8 @@ DOS/65が起動している状態で、コンソール入力待ち（もしく�
 
 ![](https://github.com/akih-san/MEZW65C_RAM-Rev2.1/blob/main/photo/invoke_monitor.png)
 
-## COPYRIGHT:
-Copyright (c) Richard A. Leary, 180 Ridge Road, Cimarron, CO 81220<br>
 <br>
-This documentation and the associated software is not public domain, freeware,<br>
-or shareware. It is still commercial documentation and software.<br>
+モニタは、BYEコマンドでモニタを終了すると、呼び出し元に戻ります。<br>
+ファームウェアから、monitorコマンドで呼び出したときは、ファームウェアに戻り、<br>
+DOS/65から、ＣＴＬ＋￥キーで呼び出した場合は、DOS/65に戻ります。<br>
 <br>
-Permission is granted by Richard A. Leary to distribute this documentation and<br>
-software free to individuals for personal, non-commercial use.<br>
-<br>
-This means that you may not sell it. Unless you have obtained permission from<br>
-Richard A. Leary, you may not re-distribute it. Please do not abuse this.<br>
-<br>
-CP/M is a trademark of Caldera.<br>
