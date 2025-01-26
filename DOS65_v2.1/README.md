@@ -1,5 +1,6 @@
 ## OSI DOS/65について
-オリジナルのReadme.mdを引用しています。そして、必要事項を付け加えてあります。
+オリジナルのReadme.mdを引用しています。そして、必要事項を付け加えてあります。<br>
+オリジナルは[こちら](https://github.com/osiweb/DOS65/tree/master)
 
 # DOS/65
 DOS/65はRich Leary によって開発された、6502 用の本格的な CP/M 互換機です。<br>
@@ -17,8 +18,7 @@ MEZW65C_RAMで動作するバイナリイメージを作成するために必要
 
 ### [Documentation](Documentation)
 
-This directory does contain all the manuals, as well as some DOS/65 utilities to<br>
-read data and directories from OS65-D disks.<br>
+このディレクトリには、すべてのマニュアルと、OS65-D ディスクからデータとディレクトリを読み取るための DOS/65 ユーティリティがいくつか含まれています。
 
 ### [DOS65.SYS](dos_src)
 ソースファイルは、[WDCTOOL](https://wdc65xx.com/WDCTools)のアセンブラ用に修正しました。<br>
