@@ -1,7 +1,7 @@
 # MEZW65C_RAM ファームウェア Rev2.1
 作成中 - Under construction -<br>
 
-![](photo/Rev2.1opening.JPG)
+![](photo/Rev2.1opening.png)
 
 ## 特徴
   OSI用の DOS/65を移植し、[Rev2.0](https://github.com/akih-san/MEZW65C_RAM-Rev2.0/tree/main)に追加しました。<br>
