@@ -30,15 +30,15 @@ This is the 6502 assembly code for v2.1<br>
 Windows用のバッチファイルでバイナリのアプリケーションを作成できます。
 
 ## COPYRIGHT:
-Copyright (c) Richard A. Leary, 180 Ridge Road, Cimarron, CO 81220
-
-This documentation and the associated software is not public domain, freeware,
-or shareware. It is still commercial documentation and software.
-
-Permission is granted by Richard A. Leary to distribute this documentation and
-software free to individuals for personal, non-commercial use.
-
-This means that you may not sell it. Unless you have obtained permission from
-Richard A. Leary, you may not re-distribute it. Please do not abuse this.
-
-CP/M is a trademark of Caldera.
+Copyright (c) Richard A. Leary, 180 Ridge Road, Cimarron, CO 81220<br>
+<br>
+This documentation and the associated software is not public domain, freeware,<br>
+or shareware. It is still commercial documentation and software.<br>
+<br>
+Permission is granted by Richard A. Leary to distribute this documentation and<br>
+software free to individuals for personal, non-commercial use.<br>
+<br>
+This means that you may not sell it. Unless you have obtained permission from<br>
+Richard A. Leary, you may not re-distribute it. Please do not abuse this.<br>
+<br>
+CP/M is a trademark of Caldera.<br>
