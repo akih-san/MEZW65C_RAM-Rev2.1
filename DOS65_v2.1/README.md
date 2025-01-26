@@ -1,19 +1,19 @@
 ## OSI DOS/65について
-オリジナルのReadme.mdを抜粋しており、必要事項を付け加えてあります。
+オリジナルのReadme.mdを引用しています。そして、必要事項を付け加えてあります。
 
 # DOS/65
-This is a full-fledged CP/M work-alike for the 6502 developed by Rich Leary. He<br>
-has made the software and documentation available for individual (hobbyist) use.<br>
-<br>
-See the OSIWeb forum thread here: http://osiweb.org/osiforum/viewtopic.php?f=4&t=235
-<br>
-The software is still commercial software, though, so please contact Richard<br>
-Leary if you wish to distribute the software (see license info below).<br>
+DOS/65はRich Leary によって開発された、6502 用の本格的な CP/M 互換機です。<br>
+ソフトウェアとドキュメントは、個人 (愛好家) が使用できるように公開されています。<br>
+
+OSIWeb フォーラムのスレッドはこちらをご覧ください: http://osiweb.org/osiforum/viewtopic.php?f=4&t=235
+
+このソフトウェアは商用ソフトウェアであるため、販売目的でソフトウェアを再配布する場合は<br>
+Richard Leary氏に連絡してください (ライセンス情報は下記を参照)。<br>
 
 ## Contents
-The contents of this archive were posted to the OSIWeb forum by Rich Leary in 2015.<br>
-Currently, this archive does not contain a bootable image, but does contain the source<br>
-and documentation required to create a bootable image.<br>
+このアーカイブの内容は、2015 年に Rich Leary氏によって OSIWeb フォーラムに投稿されました。<br>
+このアーカイブには起動可能なイメージは含まれていません。<br>
+MEZW65C_RAMで動作するバイナリイメージを作成するために必要なソースとドキュメントが含まれています。<br>
 
 ### [Documentation](Documentation)
 
@@ -44,3 +44,15 @@ DOS/65が起動している状態で、コンソール入力待ち（もしく�
 ファームウェアから、monitorコマンドで呼び出したときは、ファームウェアに戻り、<br>
 DOS/65から、ＣＴＬ＋￥キーで呼び出した場合は、DOS/65に戻ります。<br>
 <br>
+
+## 著作権
+
+著作権 (c) Richard A. Leary、180 Ridge Road、Cimarron、CO 81220<Br>
+
+このドキュメントおよび関連ソフトウェアは、パブリック ドメイン、フリーウェア、またはシェアウェアではありません。<Br>
+これらは商用ドキュメントおよびソフトウェアです。<Br>
+<Br>
+Richard A. Leary氏は、このドキュメントとソフトウェアを個人的かつ非営利的な使用目的で無料で配布することを許可しています。<Br>
+販売に関しては、Richard A. Leary氏から許可を得ない限り、これを再配布することはできません。<Br>
+<Br>
+CP/M は Caldera の商標です。<Br>
