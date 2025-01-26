@@ -82,5 +82,50 @@ DOS/65は、OSで設計上最大8ドライブまで使用可能ですが、MEZW6
 
 ![](photo/dskimage.png)
 
+# 開発環境
+- Rev2.0のソースのコンパイルは、マイクロチップ社のMPLAB X IDE v6.20を使用しています。
+  - [MPLAB® X Integrated Development Environment (IDE)](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide)
+<br>
+
+- The Western Design Center, Inc.が提供しているアセンブラ、cコンパイラを含む統合開発環境
+  - [WDCTools](https://wdc65xx.com/WDCTools)
+<br>
+
+- フリーで現役の6502用Cコンパイラです。
+  - [CC65](https://cc65.github.io/)
+<br>
+
+- モトローラフォーマットのヘキサファイルとバイナリファイル相互変換ツール
+  - [bin2mot.exe、mot2bin.exe](https://sourceforge.net/projects/bin2mot/files/)
+<br>
+
+- 6502用の2 パス ポータブル クロス アセンブラ
+  - [xa (xa65) Version 2.4.1](https://www.floodgap.com/retrotech/xa/)
+<br>
+
+- 数多くののCPUに対応したマクロアセンブラ
+  - [ASW,ASL](http://john.ccac.rwth-aachen.de:8000/as/)
+<br>
+
+- FatFsはR0.15を使用しています。
+  - [FatFs - Generic FAT Filesystem Module](http://elm-chan.org/fsw/ff/00index_e.html)
+<br>
+
+# PIC18F47Q43/Q84/Q83への書き込み
+- マイクロチップ社の書き込みツールです。
+  - [snap](https://www.microchip.com/en-us/development-tool/PG164100)
+<br>
+
+- PICkitminus書き込みソフトを用いて、書き込むことが出来ます。以下で入手できます。
+  - [PICkitminus](http://kair.us/projects/pickitminus/)
+<br>
+
+PICへの書き込みツールを用いて、ヘキサファイルを書き込みます。<br>
+<br>
+- PIC18F47Q43 - R2.1q43.hex
+- PIC18F47Q84 - R2.1q84.hex
+- PIC18F47Q83 - R2.1q83.hex
+<br>
+
 
 
