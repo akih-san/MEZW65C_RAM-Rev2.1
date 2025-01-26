@@ -8,7 +8,7 @@
 ありません。<br>
 BASICを立ち上げた後、loadコマンドで読み込んで使用します。<br>
 <br>
-![](photo/startrek.png)
+![]([photo/startrek.png](../../photo/startrek.png))
 
 
 
