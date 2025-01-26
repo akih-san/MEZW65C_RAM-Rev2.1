@@ -82,7 +82,7 @@ DOS/65は、OSで設計上最大8ドライブまで使用可能ですが、MEZW6
 
 ![](photo/dskimage.png)
 
-# 開発環境
+## 開発環境
 - Rev2.0のソースのコンパイルは、マイクロチップ社のMPLAB X IDE v6.20を使用しています。
   - [MPLAB® X Integrated Development Environment (IDE)](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide)
 <br>
@@ -111,7 +111,7 @@ DOS/65は、OSで設計上最大8ドライブまで使用可能ですが、MEZW6
   - [FatFs - Generic FAT Filesystem Module](http://elm-chan.org/fsw/ff/00index_e.html)
 <br>
 
-# PIC18F47Q43/Q84/Q83への書き込み
+## PIC18F47Q43/Q84/Q83への書き込み
 - マイクロチップ社の書き込みツールです。
   - [snap](https://www.microchip.com/en-us/development-tool/PG164100)
 <br>
@@ -126,6 +126,3 @@ PICへの書き込みツールを用いて、ヘキサファイルを書き込�
 - PIC18F47Q84 - R2.1q84.hex
 - PIC18F47Q83 - R2.1q83.hex
 <br>
-
-
-
