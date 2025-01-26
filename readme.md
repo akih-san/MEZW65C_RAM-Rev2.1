@@ -81,6 +81,22 @@ DOS/65は、OSで設計上最大8ドライブまで使用可能ですが、MEZW6
 
 ![](photo/dskimage.png)
 
+## DEBUGプログラムは動作出来ない<br>（モニタの呼び出し機能を使ってデバッグ）
+DOS/65のオリジナルDEBUGプログラムは、IRQ/BRKのベクタを書き換えます。しかしファームウェアRev2.1は<br>
+IRQ/BRKを使って周期的にコンソール入出力を管理しているため、DEBUGを動かすことが出来ません。<br>
+Rev2.1では、DEBUGの代わりに、常駐モニタを呼び出す機能を用意しています。<br>
+DOS/65が起動している状態で、コンソール入力待ち（もしくは、キー入力チェック）の時に、<br>
+ＣＴＬ＋￥キーを入力することでモニタが立ち上がります。<br>
+このモニタの呼び出し機能を使用して、いつでもプログラムをデバッグすることが出来ます。<br>
+
+![](photo/invoke_monitor.png)
+
+<br>
+モニタは、BYEコマンドでモニタを終了すると、呼び出し元に戻ります。<br>
+ファームウェアから、monitorコマンドで呼び出したときは、ファームウェアに戻り、<br>
+DOS/65から、ＣＴＬ＋￥キーで呼び出した場合は、DOS/65に戻ります。<br>
+<br>
+
 ## 開発環境
 - Rev2.0のソースのコンパイルは、マイクロチップ社のMPLAB X IDE v6.20を使用しています。
   - [MPLAB® X Integrated Development Environment (IDE)](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide)
