@@ -27,7 +27,16 @@ Windows用のバッチファイルでバイナリのDOS65.SYSを作成できま�
 ### [Source](Source)
 This is the 6502 assembly code for v2.1<br>
 ソースファイルは、[WDCTOOL](https://wdc65xx.com/WDCTools)のアセンブラ用に修正しました。<br>
-Windows用のバッチファイルでバイナリのアプリケーションを作成できます。
+Windows用のバッチファイルでバイナリのアプリケーションを作成できます。<br>
+
+## DEBUGプログラムは動作出来ない<br>（モニタの呼び出し機能を使ってデバッグ）
+オリジナルのDEBUGプログラムは、IRQ/BRKのベクタを書き換えます。しかしファームウェアRev2.1は<br>
+IRQ/BRKを使って周期的にコンソール入出力を管理しているため、DEBUGを動かすことが出来ません。<br>
+Rev2.1では、DEBUGの代わりに、常駐モニタを呼び出す機能を追加してあります。<br>
+DOS/65が起動している状態で、コンソール入力待ち（もしくは、キー入力チェック）の時に、<br>
+ＣＴＬ＋￥キーを入力することでモニタが立ち上がります。<br>
+このモニタの呼び出し機能を使用して、いつでもプログラムをデバッグすることが出来ます。
+
 
 ## COPYRIGHT:
 Copyright (c) Richard A. Leary, 180 Ridge Road, Cimarron, CO 81220<br>
