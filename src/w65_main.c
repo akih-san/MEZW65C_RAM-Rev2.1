@@ -713,7 +713,8 @@ static FRESULT boot_file(void) {
 		write_sram( fh.load_p+mezID_off, (uint8_t *)&binv, BINV_SIZE );		// address of monitor's mezID
 	}
 
-	write_sram(0xFFFC, (uint8_t *)&fh.cstart_addr, 2);	start_cpu();	//set monitor cold start
+	write_sram(0xFFFC, (uint8_t *)&fh.cstart_addr, 2);
+	start_cpu();	//set monitor cold start
 	rs = drive_cpu();
 	if ( !rs ) {
 		if ( !fh.bios_sw ) {	// if standalone prpgram is terminated, then need reload monitor
@@ -1138,8 +1139,8 @@ static FRESULT open_dos65(void) {
 	binv.addr = binv.caddr;
 	write_sram( fh.load_p+mezID_off, (uint8_t *)&binv, BINV_SIZE );		// address of monitor's mezID
 
-	write_sram(0xFFFC, (uint8_t *)&fh.cstart_addr, 2);	start_cpu();	//set monitor cold start
-	start_cpu();
+	write_sram(0xFFFC, (uint8_t *)&fh.cstart_addr, 2);
+	start_cpu();	//set monitor cold start
 	rs = drive_cpu();
 	if ( !rs ) {
 		binv.sw = 0;	// terminate bios_call program
