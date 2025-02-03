@@ -264,7 +264,8 @@ void port_init(void)
 
 	// DCK (RA1)
 	WPU(W65_DCK) = 0;	// disable pull up
-	LAT(W65_DCK) = 0;	// BANK REG CLK = 0
+//	LAT(W65_DCK) = 0;	// BANK REG CLK = 0
+	LAT(W65_DCK) = 1;	// BANK REG CLK = 1
 	TRIS(W65_DCK) = 0;	// Set as output
 
 	// SRAM_R/(/W) (RA4)
@@ -365,8 +366,10 @@ void write_sram(uint32_t addr, uint8_t *buf, unsigned int len)
 			LAT(W65_ADR_H) = ab.lh;
 
 		    LAT(W65_ADBUS) = ab.hl;
-			LAT(W65_DCK) = 1;			// Set Bank register
-			LAT(W65_DCK) = 0;
+//			LAT(W65_DCK) = 1;			// Set Bank register
+//			LAT(W65_DCK) = 0;
+			LAT(W65_DCK) = 0;			// Set Bank register
+			LAT(W65_DCK) = 1;
 			
 	        LAT(W65_RW) = 0;					// activate /WE
 	        LAT(W65_ADBUS) = ((uint8_t*)buf)[i];
@@ -409,8 +412,10 @@ void read_sram(uint32_t addr, uint8_t *buf, unsigned int len)
 			LAT(W65_ADR_H) = ab.lh;
 
 		    LAT(W65_ADBUS) = ab.hl;
-			LAT(W65_DCK) = 1;						// Set Bank register
-			LAT(W65_DCK) = 0;
+//			LAT(W65_DCK) = 1;						// Set Bank register
+//			LAT(W65_DCK) = 0;
+			LAT(W65_DCK) = 0;						// Set Bank register
+			LAT(W65_DCK) = 1;
 			
 			TRIS(W65_ADBUS) = 0xFF;					// Set as input
 			ab.w++;									// Ensure bus data setup time from HiZ to valid data
