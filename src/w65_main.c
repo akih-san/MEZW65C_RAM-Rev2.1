@@ -226,7 +226,7 @@ void main(void)
 	}
 
 	if( load_config() < 0) while (1);
-	printf("\r\nUse NCO1 %2.3fMHz\r\n\n",clk_fs * 30.5175781 / 1000000);
+	printf("\r\nUse NCO1 %2.3fMHz\r\n\n",(double)clk_fs * 30.5175781 / 1000000);
 	
 	reset_clk();
 	clc_init();

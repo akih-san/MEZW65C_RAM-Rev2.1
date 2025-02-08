@@ -358,22 +358,21 @@ void write_sram(uint32_t addr, uint8_t *buf, unsigned int len)
 	ab.w = addr;
 	i = 0;
 
-	TRIS(W65_ADBUS) = 0x00;				// Set as output
 	if (cpu_flg) {
 		// W65C816 native mode
 		while( i < len ) {
 		    LAT(W65_ADR_L) = ab.ll;
 			LAT(W65_ADR_H) = ab.lh;
 
-		    LAT(W65_ADBUS) = ab.hl;
-//			LAT(W65_DCK) = 1;			// Set Bank register
-//			LAT(W65_DCK) = 0;
-			LAT(W65_DCK) = 0;			// Set Bank register
-			LAT(W65_DCK) = 1;
-			
-	        LAT(W65_RW) = 0;					// activate /WE
-	        LAT(W65_ADBUS) = ((uint8_t*)buf)[i];
-	        LAT(W65_RW) = 1;					// deactivate /WE
+	        LAT(W65_RW) = 0;			// activate /WE
+			TRIS(W65_ADBUS) = 0x00;		// Set as output
+			LAT(W65_DCK) = 0;			// bank addres data setup
+		    LAT(W65_ADBUS) = ab.hl;		// set bank address to data bas
+			LAT(W65_DCK) = 1;			// assert bank address
+
+			LAT(W65_ADBUS) = ((uint8_t*)buf)[i];
+	        LAT(W65_RW) = 1;			// deactivate /WE
+			TRIS(W65_ADBUS) = 0xff;		// Set as input
 
 			i++;
 			ab.w++;
@@ -386,14 +385,15 @@ void write_sram(uint32_t addr, uint8_t *buf, unsigned int len)
 			LAT(W65_ADR_H) = ab.lh;
 
 	        LAT(W65_RW) = 0;					// activate /WE
+			TRIS(W65_ADBUS) = 0x00;		// Set as output
 	        LAT(W65_ADBUS) = ((uint8_t*)buf)[i];
 	        LAT(W65_RW) = 1;					// deactivate /WE
+			TRIS(W65_ADBUS) = 0xff;		// Set as input
 
 			i++;
 			ab.w++;
 	    }
 	}
-	TRIS(W65_ADBUS) = 0xff;					// Set as input
 }
 
 void read_sram(uint32_t addr, uint8_t *buf, unsigned int len)
@@ -407,17 +407,15 @@ void read_sram(uint32_t addr, uint8_t *buf, unsigned int len)
 	if (cpu_flg) {
 		// W65C816 native mode
 		while( i < len ) {
-			TRIS(W65_ADBUS) = 0x00;					// Set as output
 			LAT(W65_ADR_L) = ab.ll;
 			LAT(W65_ADR_H) = ab.lh;
 
-		    LAT(W65_ADBUS) = ab.hl;
-//			LAT(W65_DCK) = 1;						// Set Bank register
-//			LAT(W65_DCK) = 0;
 			LAT(W65_DCK) = 0;						// Set Bank register
+			TRIS(W65_ADBUS) = 0x00;					// Set as output
+		    LAT(W65_ADBUS) = ab.hl;
 			LAT(W65_DCK) = 1;
-			
 			TRIS(W65_ADBUS) = 0xFF;					// Set as input
+
 			ab.w++;									// Ensure bus data setup time from HiZ to valid data
 			((uint8_t*)buf)[i] = PORT(W65_ADBUS);			// read data
 			i++;
